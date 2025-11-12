@@ -1,0 +1,15 @@
+ body {
+    /* La ruta correcta:
+       1. `../` significa "sube un nivel" (desde `css/` a `mi_proyecto/`).
+       2. `img/` significa "entra en la carpeta 'img'".
+       3. `fondo_reloj.jpg` es el nombre de tu archivo de imagen.
+    */
+    background-image: url('/img/fondo_reloj.png'); 
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    
+    /* Opcional: Color de fondo si la imagen no carga o es transparente */
+    background-color: #333; /* Un gris oscuro, puedes ajustarlo */
+}

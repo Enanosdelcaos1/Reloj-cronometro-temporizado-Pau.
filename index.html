@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj despertador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+ <button id="abrir-popup">Cambiar Idioma</button>
+ 
+<dialog id="selector-idioma">
+  <h3>Selecciona tu Idioma</h3>
+  <div>
+    <button class="idioma-btn" data-lang="es">Español</button>
+    <button class="idioma-btn" data-lang="en">English</button>
+    <button class="idioma-btn" data-lang="fr">Français</button>
+  </div>
+  <button id="cerrar-popup">Cerrar</button>
+</dialog>
+
+
+    <h1 id="reloj" class="#reloj"></h1>
+    
+ <button id="onoff_crono" class="btn">iniciar</button>
+    <h1 id="cronometro"></h1>
+ <button id="reset_crono" class="btn">reset</button>
+    
+ <button id="onoff_temp" class="btn"></button>
+    <h1 id="temporizador"></h1>
+ <button id="reset_temp" class="btn"></button>
+
+
+<script  type="module" src="js/main.js"></script> 
+<script src="js/cronometro.js"></script> 
+
+<script src="js/temporizador.js"></script> 
+
+</body>
+</html>
