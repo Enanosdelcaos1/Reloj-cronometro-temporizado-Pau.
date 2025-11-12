@@ -4,7 +4,7 @@
        2. `img/` significa "entra en la carpeta 'img'".
        3. `fondo_reloj.jpg` es el nombre de tu archivo de imagen.
     */
-    background-image: url('/img/fondo_reloj.png'); 
+    background-image: url('/img/nueva\ york.png'); 
     
     background-size: cover;
     background-attachment: fixed;

@@ -1,153 +1,137 @@
-*{
+* {
     margin: 0;
     padding: 0;
     line-height: 0;
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    body {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-    }
-}
-.btn{
-    font-size: 1.5rem;
-    padding: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(1, 16, 11);
-    color: rgb(208, 193, 193);
-    cursor: pointer;
-
-}
-
-body{
+body {
     height: 100dvh;
     padding: 20dvh;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr auto;
     gap: 20px;
-background-color: rgb(210, 64, 11);
-   
+    background-color: rgb(210, 64, 11);
 }
 
-#reloj{
+/* Estilos comunes para botones */
+.btn,
+#abrir-popup,
+.idioma-btn,
+#cerrar-popup {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: rgb(1, 16, 11);
+    color: rgb(208, 193, 193);
+}
+
+#reloj {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 150px;
-    font-size:  7rem;
-    min-width: 300;
+    font-size: 7rem;
+    min-width: 300px;
     background-color: black;
     color: rgb(220, 172, 16);
     text-align: center;
     border-radius: 20px;
-
 }
 
-/* Estilos básicos del botón principal para abrir el popup */
+/* Botón principal para abrir popup */
 #abrir-popup {
-  background-color: #08121e; /* Azul primario */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #08121e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #abrir-popup:hover {
-  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    background-color: #0056b3;
 }
 
-/* --- Estilos para la ventana de diálogo (el popup) --- */
-
-/* Estilo general del elemento <dialog> */
+/* Dialog del selector de idioma */
 #selector-idioma {
-  border: none;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  text-align: center;
+    border: none;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
 }
 
-/* Estilo para el fondo que oscurece la pantalla (backdrop) */
 #selector-idioma::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px); /* Efecto de desenfoque opcional */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
 }
 
-/* Estilo para el contenedor de los botones de idioma */
 #selector-idioma > div {
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-around;
-  gap: 10px; /* Espacio entre los botones */
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
 }
 
-/* Estilos para los botones de selección de idioma */
+/* Botones de idioma */
 .idioma-btn {
-  background-color: #28a745; /* Verde */
-  color: white;
-  border: 1px solid #218838;
-  padding: 8px 15px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  flex-grow: 1; /* Para que los botones se expandan uniformemente */
-  transition: all 0.2s ease;
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #218838;
+    padding: 8px 15px;
+    font-size: 14px;
+    flex-grow: 1;
 }
 
 .idioma-btn:hover {
-  background-color: #218838;
-  transform: translateY(-1px); /* Efecto leve de elevación */
+    background-color: #218838;
+    transform: translateY(-1px);
 }
 
-/* Estilo para el botón de cerrar */
+/* Botón cerrar popup */
 #cerrar-popup {
-  background-color: #dc3545; /* Rojo */
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 #cerrar-popup:hover {
-  background-color: #c82333;
+    background-color: #c82333;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
     body {
-        grid-template-columns: 1fr !important; /* Prueba con esto */
+        grid-template-columns: 1fr;
+    }
+    
+    #reloj {
+        font-size: 5rem;
+        height: 100px;
     }
 }
 
-#reloj {
-        font-size: 7rem; /* Reduce a un tamaño más adecuado para móviles */
-        height: 100px;     /* Opcional: Reduce la altura del contenedor del reloj */
-    }
-    @media (max-width: 576px) {
-    /* Punto de quiebre para MÓVILES GRANDES */
+@media (max-width: 576px) {
     #reloj {
-        font-size: 2.5rem; /* Se reduce aún más a 3.5rem */
+        font-size: 2.5rem;
         height: 100px;
     }
 }
 
 @media (max-width: 380px) {
-    /* Punto de quiebre para MÓVILES PEQUEÑOS */
     #reloj {
-        font-size: 1.5rem; /* Se reduce al mínimo legible */
+        font-size: 1.5rem;
         height: 80px;
     }
 }
-
